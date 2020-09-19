@@ -3,7 +3,7 @@ import express from 'express';
 import socketIo from 'socket.io';
 
 import { Message } from './models';
-import { config } from './config';
+import { config } from '../config';
 
 export class ChatServer {
   public static readonly PORT: any = config.api.port;
