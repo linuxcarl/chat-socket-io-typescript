@@ -1,5 +1,4 @@
-import { Message } from './message.model';
-import { User } from './user.model';
+import { Message, User } from './';
 
 export class ChatMessage extends Message {
   constructor(from: User, content: string) {

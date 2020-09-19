@@ -1,4 +1,4 @@
-import { User } from './user.model';
+import { User } from './';
 
 export class Message {
   constructor(private from: User, private content: string) {}

@@ -2,7 +2,7 @@ import { createServer, Server } from 'http';
 import express from 'express';
 import socketIo from 'socket.io';
 
-import { Message } from './models/message.model';
+import { Message } from './models';
 import { config } from './config';
 
 export class ChatServer {
