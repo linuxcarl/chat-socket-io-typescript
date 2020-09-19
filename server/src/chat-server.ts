@@ -1,5 +1,5 @@
 export class ChatServer {
-  constructor() {}
-
-  public getApp() {}
+  public getApp(): void {
+    console.log('app');
+  }
 }
