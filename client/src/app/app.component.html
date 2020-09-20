@@ -1,2 +1,33 @@
-hola d
-<router-outlet></router-outlet>
+<mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenav>
+    <mat-nav-list>
+      <a mat-list-item href="https://carlosramirezflores.com/" target="_blank">
+        <mat-icon mat-list-icon>person</mat-icon>
+        <span mat-line translate>My WebSite</span>
+      </a>
+      <a mat-list-item href="https://github.com/linuxcarl/chat-socket-io-typescript" target="_blank">
+        <mat-icon mat-list-icon>code</mat-icon>
+        <span mat-line translate>Source Code GitHub</span>
+      </a>
+      <a mat-list-item
+        href="https://medium.com/dailyjs/real-time-apps-with-typescript-integrating-web-sockets-node-angular-e2b57cbd1ec1"
+        target="_blank">
+        <mat-icon mat-list-icon>web</mat-icon>
+        <span mat-line translate>Blog Post the Author</span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <div>
+    <mat-toolbar color="primary">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Typescript Chat</span>
+    </mat-toolbar>
+
+    <div class="app-content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</mat-sidenav-container>
