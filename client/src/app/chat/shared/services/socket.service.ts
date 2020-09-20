@@ -1,15 +1,12 @@
-import * as socketIo from 'socket.io';
+import * as socketIo from 'socket.io-client';
 import { Injectable } from '@angular/core';
 import { Observable, Observer } from 'rxjs';
 import { Message } from '../model/message';
 import { Event } from '../model/event';
-@Injectable({
-  providedIn: 'root'
-})
 
 const SERVER_URL = 'http://localhost:8080';
 
-@Injectable();
+@Injectable()
 export class SocketService {
   private socket;
   constructor() { }
