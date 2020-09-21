@@ -4,7 +4,7 @@ import { Observable, Observer } from 'rxjs';
 import { Message } from '../model/message';
 import { Event } from '../model/event';
 
-const SERVER_URL = 'http://localhost:8080';
+const SERVER_URL = 'http://localhost:3000';
 
 @Injectable()
 export class SocketService {
