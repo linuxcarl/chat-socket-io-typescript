@@ -3,31 +3,32 @@ import { Injectable } from '@angular/core';
 import { Observable, Observer } from 'rxjs';
 import { Message } from '../model/message';
 import { Event } from '../model/event';
+import { environment } from 'src/environments/environment';
 
-const SERVER_URL = 'http://localhost:3000';
+const SERVER_URL = environment.apiUrl;
 
 @Injectable()
 export class SocketService {
   private socket;
-  constructor() { }
+  constructor() {}
 
-  public initSocket(): void{
+  public initSocket(): void {
     this.socket = socketIo(SERVER_URL);
   }
 
-  public send(message: Message): void{
-    this.socket.emit('message', message)
+  public send(message: Message): void {
+    this.socket.emit('message', message);
   }
 
-  public onMessage(): Observable<Message>{
-    return new Observable<Message>(observer => {
+  public onMessage(): Observable<Message> {
+    return new Observable<Message>((observer) => {
       this.socket.on('message', (data: Message) => observer.next(data));
-    })
+    });
   }
 
-  public onEvent(event: Event): Observable<any>{
-    return new Observable<Event>(observer =>{
-      this.socket.on(event, () => observer.next())
-    })
+  public onEvent(event: Event): Observable<any> {
+    return new Observable<Event>((observer) => {
+      this.socket.on(event, () => observer.next());
+    });
   }
 }
