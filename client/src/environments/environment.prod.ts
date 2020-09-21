@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  apiUrl: 'http://api-chat.extrasistemas.com/',
+  apiUrl: 'https://www.api-chat.extrasistemas.com',
   apiAvatar: 'https://api.adorable.io/avatars/32',
 };
